@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar outline color="primary">
+    <ion-title>
+     COVIDOMETRO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    
+      <ion-card-header>
+      <ion-chip outline>
+        <ion-label>Novas Mortes</ion-label>
+      </ion-chip>
+      <ion-chip outline color="danger">
+        <ion-label>Novos Casos</ion-label>
+      </ion-chip>
+      <ion-chip outline color="success">
+        <ion-label>Vacinação</ion-label>
+      </ion-chip>
+      </ion-card-header>
+    <ion-grid>      
+      <ion-row *ngFor="let item of itens" >
+        <ion-col>
+          {{item.nome}}
+        </ion-col>
+        <ion-col class="numero">
+          {{item.casos}} 
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
+   </ion-card>
+</ion-content>
